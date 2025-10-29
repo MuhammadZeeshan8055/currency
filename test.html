@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4e4ba;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            min-height: 45vh;
+            width: 40vh;
+        }
+
+        form {
+            margin: 2rem 0 1rem 0;
+        }
+
+        .form-group input {
+            border-radius: 10px;
+            line-height: 30px;
+            padding: 10px;
+            width: 95%;
+            max-width: 100%;
+            margin: 10px 0 0 0;
+            border: 1px solid #c5c5c5;
+        }
+
+        .main-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2em 0 0 0;
+        }
+
+        .flag-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #c5c5c5;
+            border-radius: 10px;
+            padding: 2px;
+        }
+
+        .flag-option img {
+            height: 30px;
+        }
+
+        select#from,
+        select#to {
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            border-radius: 0.75rem;
+        }
+
+        i {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .msg,
+        button {
+            margin: 2em 0 0 0;
+        }
+
+        form button {
+            width: 100%;
+            border: 1px solid gray;
+            color: white;
+            background: #af4d98;
+            font-size: 1rem;
+            height: 3rem;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <form>
+            <div class="form-group">
+                <label for="amount">Enter Amount</label>
+                <br>
+                <input type="text" name="amount" value="1" id="amount">
+            </div>
+            <div class="main-section">
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <br>
+                    <div class="flag-option">
+                        <img src="https://flagsapi.com/US/flat/64.png" />
+                        <select name="from" id="from">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="INR">INR</option>
+                        </select>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <br>
+                    <div class="flag-option">
+                        <img src="https://flagsapi.com/PK/flat/64.png" />
+                        <select name="to" id="to">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="INR">INR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="msg">1 USD = 87.97 INR</div>
+            <button>Get Exchange Rate</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

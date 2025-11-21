@@ -1,4 +1,4 @@
-let dropdowns = document.querySelectorAll('.dropdown select');
+let dropdowns = document.querySelectorAll('select');
 let btn = document.querySelector('form button');
 
 for (let select of dropdowns) {
@@ -53,7 +53,7 @@ const updateCurrency = async () => {
     let response = await fetch(URL);
     let data = await response.json();
 
-    let finalAmount = data.rates[toCurr.value];
+    let finalAmount = (data.rates[toCurr.value] * amtVal).toFixed(2);
 
     msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
 }
